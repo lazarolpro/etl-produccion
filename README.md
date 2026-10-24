@@ -1,41 +1,44 @@
-# Capa 3 — Automatización de procesos y datos
+# Capa 3 — Automatización de datos
 
-[![CI](https://github.com/lazarolpro/etl-produccion/actions/workflows/ci.yml/badge.svg)](https://github.com/lazarolpro/etl-produccion/actions/workflows/ci.yml)
 [`lazarolpro/etl-produccion`](https://github.com/lazarolpro/etl-produccion) · parte del [portafolio de 9 capacidades](https://github.com/lazarolpro/portafolio)
 
 **Capacidad demostrada:** sustituir el armado manual de reportes por un proceso
-automático que limpia, valida y resume los datos de planta.
+que limpia los datos, calcula indicadores y emite un informe reproducible.
+
+> © 2026 Ronny L. Díaz López. **Todos los derechos reservados.** El código fuente,
+> los datos de detalle y los informes completos son propiedad del autor y no se
+> publican. Prohibida su venta o uso comercial sin autorización escrita. Ver
+> [`LICENSE`](LICENSE).
 
 ## Problema real
 
-Los datos de producción llegan sucios: fechas en varios formatos, números con
-coma decimal, filas duplicadas y valores inválidos. Armar el reporte a mano
-consume horas y es propenso a errores.
+Armar el reporte de producción en una hoja de cálculo consume horas, es propenso a
+errores y los números no cuadran entre versiones. El dato "sucio" (fechas en varios
+formatos, comas decimales, duplicados) obliga a revisar todo a mano.
 
 ## Qué hace
 
-- Ingestiona un CSV "sucio" de planta.
-- Valida y limpia: formatos de fecha, números, duplicados y reglas de negocio.
-- Calcula KPIs: unidades, tasa de calidad, energía y kWh por unidad.
-- Emite un CSV limpio y un informe Markdown con el detalle por línea.
-
-## Cómo ejecutar
-
-```bash
-python etl_report.py --demo
-python etl_report.py --input data/field_raw.csv --clean-out data/field_clean.csv
-python -m pytest -q
-```
+- Valida y limpia un CSV de planta (fechas, números, duplicados, inválidos).
+- Calcula KPIs de producción, calidad y energía por línea.
+- Emite un informe Markdown y un CSV limpio, listos para decidir.
 
 ## Evidencia que produce
 
-- `data/field_raw.csv` — datos sucios de ejemplo (deterministas).
-- `data/field_clean.csv` — datos limpios.
-- `report.md` — informe con métricas de calidad del dato y KPIs.
+- [`assets/muestra_informe_produccion.pdf`](assets/muestra_informe_produccion.pdf)
+  — muestra resumida del informe de producción (con marca de agua).
+- [`data/field_raw.csv`](data/field_raw.csv) — datos de entrada (crudos).
+- [`data/field_clean.csv`](data/field_clean.csv) — datos limpios de salida.
+
+## Alcance de este repositorio
+
+Este repositorio es una **vitrina del resultado**: muestra el informe de KPIs, los
+datos de entrada y de salida. El **código fuente** y los **informes completos** son
+propiedad del autor y se mantienen fuera del repositorio público.
 
 ## Stack
 
-Python 3 (biblioteca estándar). Sin dependencias externas.
+Python 3 (solo biblioteca estándar: `csv`, `re`, `datetime`). Sin dependencias.
+*(El código no se publica; ver `LICENSE`.)*
 
 ## Por qué le importa a la empresa
 
