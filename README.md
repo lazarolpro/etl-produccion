@@ -22,8 +22,17 @@ formatos, comas decimales, duplicados) obliga a revisar todo a mano.
 - Calcula KPIs de producción, calidad y energía por línea.
 - Emite un informe Markdown y un CSV limpio, listos para decidir.
 
+## Demo visual
+
+![Calidad del dato y KPIs de producción](assets/etl_demo.gif)
+
+La animación recorre la limpieza del dato y los KPIs por línea. Video completo:
+[`assets/etl_demo.mp4`](assets/etl_demo.mp4).
+
 ## Evidencia que produce
 
+- `assets/etl_demo.mp4`, `etl_demo.gif`, `etl_demo_poster.png` — demo visual animado
+  (con miniatura).
 - [`assets/muestra_informe_produccion.pdf`](assets/muestra_informe_produccion.pdf)
   — muestra resumida del informe de producción (con marca de agua).
 - [`data/field_raw.csv`](data/field_raw.csv) — datos de entrada (crudos).
