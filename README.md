@@ -1,7 +1,7 @@
 # Capa 3 — Automatización de procesos y datos
 
 [![CI](https://github.com/lazarolpro/etl-produccion/actions/workflows/ci.yml/badge.svg)](https://github.com/lazarolpro/etl-produccion/actions/workflows/ci.yml)
-[`lazarolpro/etl-produccion`](https://github.com/lazarolpro/etl-produccion) · parte del [portafolio de 6 capacidades](https://github.com/lazarolpro/portafolio)
+[`lazarolpro/etl-produccion`](https://github.com/lazarolpro/etl-produccion) · parte del [portafolio de 9 capacidades](https://github.com/lazarolpro/portafolio)
 
 **Capacidad demostrada:** sustituir el armado manual de reportes por un proceso
 automático que limpia, valida y resume los datos de planta.
@@ -41,3 +41,6 @@ Python 3 (biblioteca estándar). Sin dependencias externas.
 
 Ataca la **automatización de tareas repetitivas** y la calidad del dato: menos
 trabajo manual, menos retrabajo y métricas confiables para decidir.
+
+**En mantenimiento:** convierte partes de trabajo y lecturas dispersas en
+indicadores para planificar mejor.
